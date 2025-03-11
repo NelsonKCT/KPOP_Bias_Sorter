@@ -39,38 +39,38 @@ layout: default
   
   var memberImages = new Array(
     // IVE
-    "assets/members/wonyoung.jpg",
-    "assets/members/yujin.jpg",
-    "assets/members/liz.jpg",
-    "assets/members/rei.jpg",
-    "assets/members/leeseo.jpg",
-    "assets/members/gaeul.jpg",
+    "{{ site.baseurl }}/assets/members/wonyoung.jpg",
+    "{{ site.baseurl }}/assets/members/yujin.jpg",
+    "{{ site.baseurl }}/assets/members/liz.jpg",
+    "{{ site.baseurl }}/assets/members/rei.jpg",
+    "{{ site.baseurl }}/assets/members/leeseo.jpg",
+    "{{ site.baseurl }}/assets/members/gaeul.jpg",
     
     // aespa
-    "assets/members/karina.jpg",
-    "assets/members/giselle.jpg",
-    "assets/members/ningning.jpg",
-    "assets/members/winter.jpg",
+    "{{ site.baseurl }}/assets/members/karina.jpg",
+    "{{ site.baseurl }}/assets/members/giselle.jpg",
+    "{{ site.baseurl }}/assets/members/ningning.jpg",
+    "{{ site.baseurl }}/assets/members/winter.jpg",
     
     // (G)I-DLE
-    "assets/members/miyeon.jpg",
-    "assets/members/minnie.jpg",
-    "assets/members/soyeon.jpg",
-    "assets/members/yuqi.jpg",
-    "assets/members/shuhua.jpg",
+    "{{ site.baseurl }}/assets/members/miyeon.jpg",
+    "{{ site.baseurl }}/assets/members/minnie.jpg",
+    "{{ site.baseurl }}/assets/members/soyeon.jpg",
+    "{{ site.baseurl }}/assets/members/yuqi.jpg",
+    "{{ site.baseurl }}/assets/members/shuhua.jpg",
     
     // Red Velvet
-    "assets/members/irene.jpg",
-    "assets/members/seulgi.jpg",
-    "assets/members/wendy.jpg",
-    "assets/members/joy.jpg",
-    "assets/members/yeri.jpg",
+    "{{ site.baseurl }}/assets/members/irene.jpg",
+    "{{ site.baseurl }}/assets/members/seulgi.jpg",
+    "{{ site.baseurl }}/assets/members/wendy.jpg",
+    "{{ site.baseurl }}/assets/members/joy.jpg",
+    "{{ site.baseurl }}/assets/members/yeri.jpg",
     
     // ITZY
-    "assets/members/yeji.jpg",
-    "assets/members/lia.jpg",
-    "assets/members/ryujin.jpg",
-    "assets/members/chaeryeong.jpg",
-    "assets/members/yuna.jpg"
+    "{{ site.baseurl }}/assets/members/yeji.jpg",
+    "{{ site.baseurl }}/assets/members/lia.jpg",
+    "{{ site.baseurl }}/assets/members/ryujin.jpg",
+    "{{ site.baseurl }}/assets/members/chaeryeong.jpg",
+    "{{ site.baseurl }}/assets/members/yuna.jpg"
   );
 </script>
