@@ -173,9 +173,9 @@ var sameRank = 1;
 var str = "";
 var i;
 
-str += "<div class='results-list'><h2>LOOΠΔ Ranking</h2><ul>";
+str += "<div class='results-list'><h2>K-pop Bias Ranking</h2><ul>";
 for (i=0; i<namMember.length; i++) {
-  str += "<li><span class='number'>"+ranking+"</span> "+namMember[lstMember[0][i]]+"</li>";
+  str += "<li><span class='number'>"+ranking+"</span> "+toNameFace(lstMember[0][i])+"</li>";
 
   if (i<namMember.length-1) {
     if (equal[lstMember[0][i]]==lstMember[0][i+1]) {
@@ -205,6 +205,11 @@ numQuestion++;
 }
 
 function toNameFace(n){
-var str = namMember[n];
-return str;
+  var str = "<div class='member-container'>";
+  if (typeof memberImages !== 'undefined' && memberImages[n]) {
+    str += "<div class='member-image'><img src='" + memberImages[n] + "' alt='" + namMember[n] + "'></div>";
+  }
+  str += "<div class='member-name'>" + namMember[n] + "</div>";
+  str += "</div>";
+  return str;
 }

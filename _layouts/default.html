@@ -10,7 +10,7 @@ layout: sorter
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.url}}/{{ site.baseurl }}/assets/sorter.css">
-  <title>LOONA bias sorter | LOOΠΔVERSE.com </title>
+  <title>{{ site.title }} | K-pop Bias Sorter</title>
   <link rel="icon" type="image/png" href="{{ site.url }}/{{ site.baseurl }}/assets/moon.png">
   <script src="{{ site.url}}/{{ site.baseurl }}/assets/sorter.js"></script>
   {{ content }}
@@ -18,11 +18,10 @@ layout: sorter
 
 <body class="song-sorter">
   <header class="page-header container">
-    <h1>LOOΠΔ bias sorter</h1>
+    <h1>{{ site.title }}</h1>
     <div>
       <p>
         {{ site.description }}
-        <br>🐰🐱🕊🐸🦌🦉🐟🦇🍎🐧🦋🐺
       </p>
     </div>
   </header>
@@ -43,7 +42,7 @@ layout: sorter
           </div>
         </div>
         <div onclick="if(finishFlag==0) sortList(0);" class="sorter-option option-tie">
-          it’s a tie!
+          it's a tie!
         </div>
       </div>
     </div>

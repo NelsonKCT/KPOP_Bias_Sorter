@@ -108,6 +108,11 @@ h2 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .song-sorter .sorter-option {
@@ -224,18 +229,34 @@ h2 {
   padding-left: 0;
 }
 
+.results-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
 .results-list li:not(:last-child) {
   padding-bottom: 4px;
-  margin-bottom: 4px;
   border-bottom: solid 1px #e1e4e8;
 }
 
-.number {
-  display: inline-block;
-  width: 20px;
-  text-align: right;
-  margin-right: 10px;
-  color: #959da5;
+.results-list .number {
+  margin-right: 15px;
+}
+
+.results-list .member-image {
+  width: 60px;
+  height: 60px;
+}
+
+.results-list .member-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.results-list .member-name {
+  margin-left: 15px;
 }
 
 /*
@@ -287,4 +308,29 @@ h2 {
 
 .olivia {
   color: #444;
+}
+
+.member-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.member-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-name {
+  text-align: center;
 }
