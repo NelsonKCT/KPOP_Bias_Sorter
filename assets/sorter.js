@@ -181,7 +181,18 @@ numQuestion++;
 }
 
 function toNameFace(n){
-  if (typeof idolData !== 'undefined') {
+  if (typeof window.filteredIdolData !== 'undefined') {
+    var idol = window.filteredIdolData[n];
+    var str = "<div class='member-container'>";
+    str += "<div class='member-image'><img src='" + idol.image + "' alt='" + idol.name + "'></div>";
+    str += "<div class='member-name'>" + idol.name + "</div>";
+    if (idol.group) {
+      str += "<div class='member-group'>" + idol.group + "</div>";
+    }
+    str += "</div>";
+    return str;
+  } 
+  else if (typeof idolData !== 'undefined') {
     var idol = idolData[n];
     var str = "<div class='member-container'>";
     str += "<div class='member-image'><img src='" + idol.image + "' alt='" + idol.name + "'></div>";

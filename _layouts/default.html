@@ -25,7 +25,22 @@ layout: sorter
       </p>
     </div>
   </header>
-  <main class="page-sorter">
+
+  <!-- 组合选择界面 -->
+  <div id="group-selection" class="container">
+    <h2>选择要包含的组合</h2>
+    <div class="group-checkboxes">
+      <label><input type="checkbox" value="IVE" checked> IVE</label>
+      <label><input type="checkbox" value="aespa" checked> aespa</label>
+      <label><input type="checkbox" value="(G)I-DLE" checked> (G)I-DLE</label>
+      <label><input type="checkbox" value="Red Velvet" checked> Red Velvet</label>
+      <label><input type="checkbox" value="ITZY" checked> ITZY</label>
+    </div>
+    <button id="start-sorter" class="start-button">开始排序</button>
+  </div>
+
+  <!-- 排序界面 -->
+  <main id="sorter-container" class="page-sorter" style="display: none;">
     <div class="container">
       <h2 id="battleNumber" class="sorter-header">
         <strong>battle #1</strong> 0% sorted
@@ -54,11 +69,55 @@ layout: sorter
   </footer>
 
   <script type="text/javascript">
-    /**
-      * Initialize
-    **/
-    initList();
-    showFinal();
+    // 等待DOM加载完成
+    document.addEventListener('DOMContentLoaded', function() {
+      // 获取开始按钮和相关元素
+      var startButton = document.getElementById('start-sorter');
+      var groupSelection = document.getElementById('group-selection');
+      var sorterContainer = document.getElementById('sorter-container');
+      
+      // 点击开始按钮时的处理
+      startButton.addEventListener('click', function() {
+        // 获取所有选中的组合
+        var selectedGroups = [];
+        var checkboxes = document.querySelectorAll('.group-checkboxes input:checked');
+        checkboxes.forEach(function(checkbox) {
+          selectedGroups.push(checkbox.value);
+        });
+        
+        // 确保至少选择了一个组合
+        if (selectedGroups.length === 0) {
+          alert('请至少选择一个组合！');
+          return;
+        }
+        
+        // 根据选择的组合过滤偶像
+        filterIdolsByGroups(selectedGroups);
+        
+        // 隐藏选择界面，显示排序界面
+        groupSelection.style.display = 'none';
+        sorterContainer.style.display = 'block';
+        
+        // 初始化排序
+        initList();
+        showFinal();
+      });
+    });
+    
+    // 根据选择的组合过滤偶像
+    function filterIdolsByGroups(selectedGroups) {
+      // 过滤原始数据
+      var filteredIdols = idolData.filter(function(idol) {
+        return selectedGroups.includes(idol.group);
+      });
+      
+      // 更新排序使用的数组
+      namMember = filteredIdols.map(idol => idol.name);
+      memberImages = filteredIdols.map(idol => idol.image);
+      
+      // 保存过滤后的数据供排序使用
+      window.filteredIdolData = filteredIdols;
+    }
   </script>
 </body>
 </html>

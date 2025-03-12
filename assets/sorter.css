@@ -337,3 +337,55 @@ h2 {
   margin-left: 5px;
   font-size: 0.7em;
 }
+
+/* 组合选择界面样式 */
+#group-selection {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+#group-selection h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.group-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.group-checkboxes label {
+  margin: 10px 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.group-checkboxes input[type="checkbox"] {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.start-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
