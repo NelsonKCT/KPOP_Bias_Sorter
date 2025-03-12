@@ -334,3 +334,14 @@ h2 {
 .member-name {
   text-align: center;
 }
+
+.member-group {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.results-list .member-group {
+  margin-left: 5px;
+  font-size: 0.7em;
+}

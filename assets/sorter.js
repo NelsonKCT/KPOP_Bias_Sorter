@@ -205,11 +205,24 @@ numQuestion++;
 }
 
 function toNameFace(n){
-  var str = "<div class='member-container'>";
-  if (typeof memberImages !== 'undefined' && memberImages[n]) {
-    str += "<div class='member-image'><img src='" + memberImages[n] + "' alt='" + namMember[n] + "'></div>";
+  if (typeof idolData !== 'undefined') {
+    var idol = idolData[n];
+    var str = "<div class='member-container'>";
+    str += "<div class='member-image'><img src='" + idol.image + "' alt='" + idol.name + "'></div>";
+    str += "<div class='member-name'>" + idol.name + "</div>";
+    if (idol.group) {
+      str += "<div class='member-group'>" + idol.group + "</div>";
+    }
+    str += "</div>";
+    return str;
+  } 
+  else {
+    var str = "<div class='member-container'>";
+    if (typeof memberImages !== 'undefined' && memberImages[n]) {
+      str += "<div class='member-image'><img src='" + memberImages[n] + "' alt='" + namMember[n] + "'></div>";
+    }
+    str += "<div class='member-name'>" + namMember[n] + "</div>";
+    str += "</div>";
+    return str;
   }
-  str += "<div class='member-name'>" + namMember[n] + "</div>";
-  str += "</div>";
-  return str;
 }
