@@ -92,30 +92,6 @@ function sortList(flag){
     }
   }
 
-  else {
-    rec[nrec] = lstMember[cmp1][head1];
-    head1++;
-    nrec++;
-    finishSize++;
-      while (equal[rec[nrec-1]]!=-1) {
-        rec[nrec] = lstMember[cmp1][head1];
-        head1++;
-        nrec++;
-        finishSize++;
-      }
-    equal[rec[nrec-1]] = lstMember[cmp2][head2];
-    rec[nrec] = lstMember[cmp2][head2];
-    head2++;
-    nrec++;
-    finishSize++;
-    while (equal[rec[nrec-1]]!=-1) {
-      rec[nrec] = lstMember[cmp2][head2];
-      head2++;
-      nrec++;
-      finishSize++;
-    }
-  }
-
   if (head1<lstMember[cmp1].length && head2==lstMember[cmp2].length) {
     while (head1<lstMember[cmp1].length){
       rec[nrec] = lstMember[cmp1][head1];
