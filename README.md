@@ -7,7 +7,8 @@ A web-based tool to help K-pop fans determine their bias ranking through a serie
 - (G)I-DLE
 - Red Velvet
 - ITZY
-
+## Demo
+[nelsonkct.github.io/KPOP_Bias_Sorter/](nelsonkct.github.io/KPOP_Bias_Sorter/)
 ## How It Works
 
 1. You'll be presented with two K-pop idols
