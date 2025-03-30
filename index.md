@@ -3,7 +3,6 @@ layout: default
 ---
 
 <script type="text/javascript">
-  // 定义偶像信息对象数组，每个对象包含名称和图片路径
   var idolData = [
     // IVE
     { name: "Wonyoung", image: "{{ site.baseurl }}/assets/members/wonyoung.jpg", group: "IVE" },
